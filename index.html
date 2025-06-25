@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arpita Kulkarni Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6h9UlS7FcNuDPhTD8uUjKwFiUpSmV7GyLkAU4vOd+q+xJ3+RIqbk1lNJyVLyT6ItA5YBiRYz+2G8G7v+0XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="css/all.min.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      color: orange;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: orange;
+    }
+  .about-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1a1a1a;
+  padding: 60px 40px;
+  gap: 40px;
+    align-items: flex-start;
+}
+
+.about-left {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+}
+
+.about-left img {
+  width: 100%;
+  height: 400px;
+  aspect-ratio: 1 / 1; /* ensures square */
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.about-right {
+  flex: 2 1 500px;
+  color: #ddd;
+}
+
+.about-right h2 {
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.about-right p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.about-right a {
+  color: orange;
+  text-decoration: none;
+}
+
+
+    .projects-section, .skills-section {
+      padding: 40px 20px;
+    }
+    
+ .skills-section {
+  background-color: #000; /* full black */
+  padding: 60px 40px;
+}
+
+    .social-icons a {
+      font-size: 1.8em;
+      color: orange;
+      margin-right: 15px;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: white;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+      margin-left: 20px;
+      padding: 30px 0;
+    }
+    .skill-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+}
+
+.skill-card i {
+  font-size: 3em;
+  color: #ffa500;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.skill-card span {
+  font-size: 1.1em;
+  color: white;
+  display: block;
+  margin-top: 5px;
+}
+
+   .projects-section {
+  background-color: #121212;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.project-card {
+  flex: 1 1 48%; /* Two cards side-by-side taking almost full width */
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
+
+.project-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-info h3 {
+  color: orange;
+  margin: 0 0 10px 0;
+}
+
+.project-info p {
+  margin: 5px 0;
+  color: #ddd;
+}
+
+.project-info ul {
+  padding-left: 20px;
+  color: #ccc;
+}
+.education-section {
+  background-color: #121212;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2em;
+  color: white;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px orange;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: orange;
+  margin: 10px auto 20px auto;
+  border-radius: 3px;
+}
+
+.education-box {
+  background-color: #1e1e1e;
+  color: #ddd;
+  border: 2px solid orange;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.education-box h3 {
+  color: orange;
+  margin-bottom: 10px;
+}
+.resume-section {
+  background-color: #121212;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.resume-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.resume-box {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+  max-width: 600px;
+  width: 100%;
+}
+
+.resume-box h3 {
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.resume-box iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #00c6ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0099cc;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Arpita Kulkarni</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#skills">My Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </header>
+<section id="about" class="about-section">
+  <div class="about-left">
+    <img src="Arpita.jpeg" alt="Arpita Kulkarni" />
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:kulkarniarpita38@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+918530578033"><i class="fas fa-phone-alt"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/918530578033" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <div class="about-right">
+   <div class="about-content">
+    <h2>About Me</h2></div>
+    <p>Hello, I'm <strong>Arpita Kulkarni</strong>, a passionate and detail-oriented software developer with a strong foundation in web and mobile application development.</p>
+    <p>With hands-on experience in technologies such as <strong>HTML, CSS, JavaScript, Python, Java</strong>, and <strong>MySQL</strong>, I enjoy turning complex requirements into clean and maintainable code.</p>
+    <p>I'm continuously learning and evolving in the dynamic world of technology. My goal is to contribute to meaningful projects, collaborate with great teams, and build software that makes a positive impact on users.</p>
+    <p>Let's connect if you’re looking for a reliable developer who brings both technical skill and creative problem-solving to the table.</p>
+    <p><strong>Mobile:</strong> <a href="tel:+918530578033">+91 8530578033</a></p>
+    <p><strong>Email:</strong> <a href="mailto:kulkarniarpita38@gmail.com">kulkarniarpita38@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="skills" class="skills-section">
+    <div class="about-content">
+      <h2>My Skills</h2>
+      <p>Technologies and tools I frequently use:</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="skill-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-card"><i class="fab fa-python"></i><span>Python</span></div>
+      <div class="skill-card"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="skill-card"><i class="fas fa-database"></i><span>MySQL</span></div>
+      <div class="skill-card"><i class="fab fa-github"></i><span>GitHub</span></div>
+      <div class="skill-card"><i class="fas fa-mobile-alt"></i><span>Mobile Apps</span></div>
+      <div class="skill-card"><i class="fas fa-fire"></i><span>Firebase</span></div>
+      <div class="skill-card"><i class="fas fa-database"></i><span>SQLite</span></div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="about-content">
+      <h2>Projects</h2>
+      <p>Here are a few projects I've worked on:</p>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Easy feed network -->
+      <div class="project-card">
+        <img src="project1.png" alt="Easy Feed Network" />
+        <div class="project-info">
+          <h3>Easy Feed Network</h3>
+          
+          <p><strong>Description:</strong> In a world grappling with the paradox of hunger coexisting with food wastage, the "Easy Feed Network" emerges as a pioneering solution to bridge the gap between surplus food resources and those in need. This innovative Food Waste Management System is designed to revolutionize the way we handle and distribute food, aligning the efforts of donors, beneficiaries, and administrators in a cohesive and efficient manner.</p>
+          <p><strong>Project Highlights:</strong></p>
+          <ul>
+            <li>Current systems involve direct donations to NGOs or through intermediary platforms.</li>
+            <li>Tracking mechanisms for donors to monitor the status of their donations are often limited.</li>
+            <li>Communication between donors, NGOs, and delivery personnel may lack efficiency and transparency.</li>
+            <li>NGOs typically manage their own logistics for food collection and distribution.</li>
+          
+          </ul>
+          <p><strong>Technologies Used:</strong>HTML,CSS,PHP,JavaScript,MySQL</p>
+          <p><strong>My Role:</strong> Complete setup, design, and whole development.</p>
+        </div>
+      </div>
+
+      <!-- Ebook Website -->
+      <div class="project-card">
+        <img src="project3.png" alt="Ebook" />
+        <div class="project-info">
+          <h3>EBook Management System</h3>
+          <p><strong>Description:</strong> There are lots of websites where customers can buy books online but unable to sell old books. I got inspired by the OLX reseIling concept and in this project I add the book reseller concept in which user can add his/her old books and another users can purchase it. In this project admin can add books and users can purchase it using add to cart option.after adding books in cart user have to enter address details and have to choose payment option and then user able to place the order. admin can view the orders of users.also user can remove books from cart.users can view the orders and also able to search books.</p>
+          <p><strong>Project Highlights:</strong></p>
+          <ul>
+            <li>A user-friendly platform for buying and selling books.</li>
+            <li>Efficient book search and filtering options</li>
+            <li>Secure payment gateways and order management.</li>
+          </ul>
+          <p><strong>Technologies Used:</strong>JSP,SERVLET,java,MySQL</p>
+          <p><strong>My Role:</strong> Complete setup, design, and whole development.</p>
+          
+
+        </div>
+      </div>
+      <!-- Customer Relationship Management System -->
+<div class="project-card">
+  <img src="project4.png" alt="Customer Relationship Management System" />
+  <div class="project-info">
+    <h3>Customer Relationship Management System</h3>
+    <p><strong>Description:</strong> The Customer Relationship Management (CRM) System is a web-based solution that helps organizations manage and automate interactions with potential and existing customers. It includes modules for handling leads, tickets, contracts, email communication, meeting scheduling, and file management. Built using Spring Boot MVC, Thymeleaf, Hibernate, and MySQL, the CRM integrates with Google services like Gmail, Calendar, and Drive for seamless operations. With role-based access controls, the system maintains high-level security while enhancing productivity. The user-friendly design ensures that employees, managers, and clients can all efficiently interact with the system.</p>
+    <p><strong>Project Highlights:</strong></p>
+    <ul>
+      <li>Customer record and interaction management</li>
+      <li>Sales tracking and reporting dashboard</li>
+      <li>Follow-up and lead reminders</li>
+      <li>Email notification integration</li>
+    </ul>
+    <p><strong>Technologies Used:</strong> Java,Springboot,Hibernate,Thymeleaf, MySQL</p>
+    <p><strong>My Role:</strong> Backend development, database design, and admin module.</p>
+  </div>
+</div>
+
+<!-- Tourism Management System -->
+<div class="project-card">
+  <img src="project5.png" alt="Tourism Management System" />
+  <div class="project-info">
+    <h3>Tourism Management System</h3>
+    <p><strong>Description:</strong> Nearly everyone goes on a vacation for this “Tourism Management System” would play a virtual role for planning the perfect trip. Tourism management system is developed in PHP and MySQL. The main objective to developed this project is to overcome the manual errors and make a computerized system.</p>
+    <p><strong>Project Highlights:</strong></p>
+    <ul>
+      <li>Search and filter destinations by type, price, or rating</li>
+      <li>User registration and booking history tracking</li>
+      <li>Admin control panel for adding/editing tour packages</li>
+    </ul>
+    <p><strong>Technologies Used:</strong> PHP, HTML, CSS, JavaScript, MySQL</p>
+    <p><strong>My Role:</strong> Web developer and UI designer</p>
+  </div>
+</div>
+
+    </div>
+  </section>
+<section id="education" class="education-section">
+  <h2 class="section-title">MY EDUCATION</h2>
+
+  <div class="education-box">
+    <h3>Masters Of Computer Application(MCA)</h3>
+    <p>DYPIMCAM,Akurdi,Pune</p>
+    <p><em>2023 - 2025</em></p>
+    <p><strong>CGPA:</strong> 8.3</p>
+  </div>
+
+  <div class="education-box">
+    <h3>Bachelors of Science(Computer Science)</h3>
+    <p>R.Y.K Science College,Nashik</p>
+    <p><em>2020 - 2023</em></p>
+    <p><strong>CGPA:</strong>9.19</p>
+  </div>
+
+  <div class="education-box">
+    <h3>Higher Secondary Certificate (HSC)</h3>
+    <p>K.S.K.W College,Nashik</p>
+    <p><em>2019 - 2020</em></p>
+    <p><strong>Percentage:</strong> 71.08%</p>
+  </div>
+
+  <div class="education-box">
+    <h3>Secondary School Certificate (SSC)</h3>
+    <p>Madhyamik Vidyalaya,Nashik</p>
+    <p><em>2017 - 2018</em></p>
+    <p><strong>Percentage:</strong>96.00%</p>
+  </div>
+</section>
+<section id="resume" class="resume-section">
+  <h2 class="section-title">MY RESUME & COVER LETTER</h2>
+
+  <div class="resume-container">
+    <div class="resume-box">
+      <h3>Resume</h3>
+      <iframe src="ArpitaResume.pdf" frameborder="0"></iframe>
+      <a href="ArpitaResume.pdf" download class="download-btn">Download Resume</a>
+    </div>
+
+    <div class="resume-box">
+      <h3>Cover Letter</h3>
+      <iframe src="ArpitaCoverletter.pdf" frameborder="0"></iframe>
+      <a href="ArpitaCoverletter.pdf" download class="download-btn">Download Cover Letter</a>
+    </div>
+  </div>
+</section>
+<footer style="background-color: #2e2e2e; color: white; padding: 40px 20px; text-align: center;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; max-width: 1200px; margin: auto;">
+
+    <!-- Follow Us -->
+    <div style="margin: 20px;">
+      <h3 style="margin-bottom: 15px;">Follow Us</h3>
+      <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 24px; margin: 0 10px;">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com" target="_blank" style="color: white; font-size: 24px; margin: 0 10px;">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <footer style="background-color: #1e1e1e; color: #f0f0f0; padding: 50px 20px; font-family: Arial, sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px;">
+
+    <!-- About -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: orange; margin-bottom: 15px;">About Me</h3>
+      <p style="line-height: 1.6; color: #ccc;">
+        I’m Arpita Kulkarni, a passionate developer focused on crafting user-friendly and meaningful web experiences. Let’s build something amazing together.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 180px;">
+      <h3 style="color: orange; margin-bottom: 15px;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#about" style="text-decoration: none; color: #ccc;">About Me</a></li>
+        <li><a href="#skills" style="text-decoration: none; color: #ccc;">Skills</a></li>
+        <li><a href="#projects" style="text-decoration: none; color: #ccc;">Projects</a></li>
+        <li><a href="#education" style="text-decoration: none; color: #ccc;">Education</a></li>
+        <li><a href="#resume" style="text-decoration: none; color: #ccc;">Resume</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: orange; margin-bottom: 15px;">Contact</h3>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:kulkarniarpita38@gmail.com" style="color: #ccc;">kulkarniarpita38@gmail.com</a></p>
+      <p><i class="fas fa-phone-alt"></i> <a href="tel:+918530578033" style="color: #ccc;">+91 85305 78033</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918530578033" target="_blank" style="color: #ccc;">WhatsApp Chat</a></p>
+    </div>
+
+    <!-- Social Media -->
+    <div style="flex: 1 1 180px;">
+      <h3 style="color: orange; margin-bottom: 15px;">Follow Me</h3>
+      <a href="https://linkedin.com" target="_blank" style="margin-right: 15px; font-size: 1.8em; color: #ccc;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank" style="font-size: 1.8em; color: #ccc;"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <hr style="margin: 40px 0; border-color: #444;">
+
+  <p style="text-align: center; font-size: 0.9em; color: #aaa;">
+    &copy; 2025 Arpita Kulkarni. Designed with ❤️ and code.
+  </p>
+</footer>
+
+
+</body>
+</html>
